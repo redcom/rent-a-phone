@@ -1,0 +1,34 @@
+{
+  "name": "api-rent-a-phone",
+  "version": "1.0.0",
+  "description": "API for rent a phone",
+  "main": "index.js",
+  "author": "redcom@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "apollo-server-express": "^2.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bcrypt": "^3.0.1",
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.16.3",
+    "graphql": "^14.0.2",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.4",
+    "nodemon": "^1.18.1"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "start": "sudo nodemon --exec yarn babel-node -- ./server.js",
+    "lint": "eslint --fix ./",
+    "clean": "rm -rf node_modules; rm -rf yarn.lock; yarn;",
+    "build": "babel src -d dist"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

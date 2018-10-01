@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    image: node/alpine
+    volumes:
+      - ./api:/home/node/app
+    working_dir: /home/node/app
+    environment:
+      - JWT_ENCRYPTION_KEY=FnJL7EDzjqWjcaY9
+      - JWT_PRIVATE_KEY=D3LttXurmJzes
+    ports:
+      - "9999:443"
+    command: "yarn start"
+  mongodb:
+    image: mvertes/alpine-mongo
+    volumes:
+      - mongodb:/data/db
+    ports:
+      - "27017:27017"
+volumes:
+  mongodb:

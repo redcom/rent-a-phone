@@ -1,0 +1,14 @@
+{
+  "name": "rent-a-phone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:dev": "docker-compose -f docker-compose.yml build --no-cache && docker-compose -f docker-compose.yml up --force-recreate --remove-orphans --always-recreate-deps",
+    "build:images": "docker-compose -f ./docker-compose.yml build --no-cache --force-rm",
+    "postinstall": "cd api && yarn"
+  },
+  "author": "",
+  "license": "ISC"
+}
